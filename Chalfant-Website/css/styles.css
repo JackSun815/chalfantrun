@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+
+/* global variables */
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+    font: normal 100%;
+}
+
+img{
+    max-width:100%;
+}
+
+.body-container{
+    margin:auto;
+    max-width:95%;
+    
+}
+
+/* top navigation bar */
+.topnav{
+    /* position: relative; */
+    /* overflow:hidden; */
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 2px 2px gray;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;  
+    justify-content: space-between;/*flex box that sets the logo and    
+                                    navbar with space in between*/
+}
+
+.navbar{
+    width:100%;
+}
+
+.navbar ul{
+    margin-right: auto;
+    margin-top:35px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+/*targets the list elements*/
+.navbar ul li{
+    display: inline-block;
+    margin: 0 5px;
+    
+}
+
+.navbar ul li a{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: black;
+}
+
+
+
+.navbar a:hover{
+    color:#7FDDDD;
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-bottom: 2px solid #258989;
+}
+
+.navbar a.active{
+    color:#7FDDDD;
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-bottom: 2px solid #258989;
+}
+
+/* body */
+
+.body-container{
+    /* background-color:white; */
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 1%;
+    padding-right:1%;
+    padding-top: 1%;
+}
+
+.body-container h1{
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing:0.1em;
+    background-color: #21ABAB;
+    width: fit-content;
+    color:white;
+    padding: 1%;
+    border-radius:10px;
+}
+/*  images  */
+#firefly{
+    width:25%;
+    float:left;
+    margin: 0 15px 0 0;
+    border-radius: 2.5%;
+}  
+
+#assessment{
+    width:25%;
+    float:left;
+    margin: 0 15px 0 0;
+    border-radius: 2.5%;
+}  
+
+#engineer{
+    width:25%;
+    float:left;
+    margin: 0 15px 0 0;
+    border-radius: 2.5%;
+}  
+
+
+/*  the events container  */
+.events{
+    margin-bottom: 5%;
+    background-color:#25D0D0;
+    border-radius: 2%;
+}
+
+.events h2{
+    color:white;
+    margin: 25px;
+    letter-spacing:0.03cm;
+
+}
+
+.events p{
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    letter-spacing:0.03cm;
+}
+
+.events a{
+    font-size: 14px;
+    color: white;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    text-decoration: none;
+    padding:0.8%;
+    border-radius:7px;
+    margin:10px;
+}
+
+.events a:hover{
+    color:#7FDDDD;
+    opacity: 0.8;
+}
+
+/*background repeating pattern with lowest z-index*/
+.pattern{
+    position: fixed;
+    width: 100vw;
+    height: 100vh; 
+    background-color: #e5e5f7;
+    opacity: 0.25;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 31px ), repeating-linear-gradient( #16a7a755, #16a7a7 );
+    z-index: -100;
+}
+
+
+
+
+/* Media Queries */
+/*desk top*/
+@media screen and (min-width: 1200px) {
+    
+  }
+  
+/*tablet*/
+@media screen and (max-width: 880px) {
+    .events{
+        padding-bottom: 15px;
+    }
+
+    /*colapse the navbar downward*/
+    .topnav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .navbar a{
+        width: 100%;
+        text-align: center;
+    }
+
+    #engineer, #assessment, #firefly{
+        width:50%;
+
+    }
+
+    .events h2{
+        float: top;        
+    }
+
+    .events p{
+        letter-spacing:0.01cm;
+        margin:auto;
+
+    }
+    .events a{
+        float:right;
+    }
+  }
+  
+  
+
+  
+/*phone*/
+@media screen and (max-width: 576px) {
+    #engineer, #assessment, #firefly{
+        margin:auto;
+        width:auto;
+
+    }
+
+    .events{
+        display: flex;
+        flex-direction: column;
+        background-color: beige;
+        width:100%;
+        margin:auto;
+        margin-bottom:10px;
+    }
+    .events h2{
+        color:black;
+        text-align: center;
+    }
+
+    .events p{
+        font-family: 'Helvetica Neue', arial, sans-serif;
+        letter-spacing:0.01cm;
+        margin-right:1px;
+    }
+
+    .events a{
+        width: fit-content;
+    }
+
+    .body-container{
+        display:flex;
+        justify-content: center;
+    }
+  }
